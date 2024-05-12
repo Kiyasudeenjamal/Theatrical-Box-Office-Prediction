@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+
+        }
+
+        form {
+            max-width: 888px;
+            margin: 20px auto;
+            background-color: #C1FABB;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            color: #596C57;
+            margin-bottom: 1px;
+            display: inline-block;
+        }
+
+        .bold-label {
+            font-weight: bold;
+        }
+
+        input[type="number"], input[type="checkbox"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 100000px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Theatrical Box Office Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Opening">First Week Gross:</label>
+        <input type="number" id="Opening" name="Opening">
+
+        <label for="Avg_per_screen">Avg earns per screen:</label>
+        <input type="number" id="Avg_per_screen" name="Avg_per_screen">
+
+        <label class="bold-label">Theatre count</label> </br>
+
+        <label for="Average">3000-4000</label>
+        <input type="checkbox" id="Average" name="Average" value="1">
+
+        <label for="Normal">Above 4000</label>
+        <input type="checkbox" id="Normal" name="Normal" value="1">
+
+        <label for="low">Below 3000</label>
+        <input type="checkbox" id="low" name="low" value="1">
+
+        <label class="bold-label">Released day</label></br>
+        <label for="Weekday">Weekday:</label>
+        <input type="checkbox" id="Weekday" name="Weekday" value="1">
+
+        <label for="Weekend">Weekend:</label>
+        <input type="checkbox" id="Weekend" name="Weekend" value="1">
+
+        <label class="bold-label">Franchise</label></br>
+        <label for="Big_franchise">Walt Disney/Universal/Sony/Warner Bros/Paramount/20th century fox</label>
+        <input type="checkbox" id="Big_franchise" name="Big_franchise" value="1">
+        <label for="Small_franchise">Other:</label>
+        <input type="checkbox" id="Small_franchise" name="Small_franchise" value="1">
+
+        <label class="bold-label">Season</label></br>
+        <label for="Winter">Winter:</label>
+        <input type="checkbox" id="Winter" name="Winter" value="1">
+        <label for="Autumn">Autumn:</label>
+        <input type="checkbox" id="Autumn" name="Autumn" value="1">
+        <label for="Summer">Summer:</label>
+        <input type="checkbox" id="Summer" name="Summer" value="1">
+        <label for="Spring">Spring:</label>
+        <input type="checkbox" id="Spring" name="Spring" value="1">
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
