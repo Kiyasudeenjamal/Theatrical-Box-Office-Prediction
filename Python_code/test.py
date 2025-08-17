@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 from sklearn.linear_model import LinearRegression
-
 data = pd.read_csv("D:\\data_analytics_pro\\Movie_gross_prediction\\new.csv")
 data = data.drop_duplicates()
 
